@@ -1,0 +1,115 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    padding: 0px 0px 11px 0px;
+    display: flex;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.imageNews {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+    position: absolute;
+    top: -30px;
+    left: 300px;
+    font-size: 100px; 
+    color: white;
+    color-background: white;
+    padding: 20px;
+    text-align: left;
+}
+.titleCar {
+  font-size: 20px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    border-radius: 20px;
+    flex-direction: column;
+    position: absolute;
+}
+
+.card1 {
+    width: 500px;
+    height: 150px;
+    background-color: white;
+    flex-direction: column;
+    border-radius:8px ;
+    margin: 15px;
+    overflow: hidden;
+    transition: 0.1S;
+    position: relative;
+    top: 200px;
+    left: 200px;
+}
+
+.card2 {
+    width: 500px;
+    height: 150px;
+    background-color: white;
+    flex-direction: column;
+    border-radius:8px ;
+    margin: 15px;
+    overflow: hidden;
+    transition: 0.1S;
+    position: relative;
+    top: 200px;
+    left: 100px;
+}
+
+.card3 {
+    width:500px;
+    height: 150px;
+    background-color: white;
+    flex-direction: column;
+    border-radius:8px ;
+    margin: 15px;
+    overflow: hidden;
+    transition: 0.1S;
+    position: relative;
+    top: 230px;
+    left: 50px;
+}
+
+.card1:hover{
+    transform: translateY(-10px);
+}
+.card2:hover{
+    transform: translateY(-10px);
+}
+
+ 
+.boton1{
+    border-radius:25px ;
+    background-color: #37BED3;
+    border-color: #37BED3;
+    width: 200px;
+    height: 40px;
+    color: #5A00CD;
+    font-size: 15px;
+    font-family:  sans-serif;
+    font-weight: bold;
+    
+}
+.boton2{
+    border-radius:25px ;
+    background-color: #FF1995;
+    border-color: #FF1995;
+    width: 200px;
+    height: 40px;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
