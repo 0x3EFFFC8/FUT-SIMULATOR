@@ -33,7 +33,7 @@ function Home() {
             L A T O R 
       </h1>
       
-      <img className={styles.imageLogin}src="Home.jpg"/>
+      <img className={styles.imageLogin}src="Home.jpeg"/>
       <button className={styles.buttonJ} button onClick={()=>{ setOpenLogin(true);}}>JUEGA AHORA</button>
       {openLogin && <Login closeLogin={setOpenLogin}/>}
       <button className={styles.buttonR}>REGISTRARSE</button>

@@ -12,35 +12,45 @@
 }
 
 .modalContainer {
-  width: 650px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
+  top: 10px;
   margin-top: -50px;
   border-radius: 12px;
-  background: linear-gradient(135deg, purple, lightblue, pink);
+  background-color: #090C11;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
-  padding: 25px;
   background-size: cover;
+  position: relative;
+  z-index: 3;  
 }
 
 .modalContainer .title {
   display: inline-block;
-  text-align: center;
   margin-top: 10px;
-
+  font-family: Roboto;
+  text-align: left;
+  color: white;
+  padding-right: 50px;
 }
 
 .titleCloseBtn {
+  position: relative;
+  right: 10px;
+  top: 10px;
   display: flex;
   justify-content: flex-end;
+  z-index: 3;
 }
 
 .titleCloseBtn button {
   background: rgba(0,0,0,0.5);
+  color: white;
   border: none;
   font-size: 25px;
   cursor: pointer;
+  border-radius: 12px;
 }
 
 .titleCloseBtn2 button {
@@ -53,11 +63,14 @@
 
 .modalContainer .body {
   flex: 50%;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.7rem;
+  font-family: Roboto;
   text-align: left;
+  padding-left: 10px;
 }
 
 .modalContainer .footer {
@@ -67,26 +80,88 @@
   align-items: center;
 }
 
-.modalContainer .footer button {
-  width: 150px;
-  height: 45px;
-  margin: 10px;
-  border: none;
-  background-color: blue;
-  color: white;
-  border-radius: 8px;
-  font-size: 20px;
-  cursor: pointer;
+
+.img {
+  width: 45%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  float: left;
+  margin: 0;
+  z-index: 1;
 }
 
-.title2{
-    margin: 0;
-    font-size: 18px;
-    margin-left: 20px;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none; 
-    color: rgb(6, 28, 70);
-    margin-left: 9px;
+.rightSide {
+  flex-grow: 1;
+  padding-left: 200px;
 }
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  height: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #5A3E7E;
+  font-style: Roboto;
+}
+
+.button_container {
+    display: flex;
+    margin-left: 150px;
+}
+
+.myButton{
+    background:none;
+    cursor:pointer;
+    border:none;
+    position: relative;
+    whidth: 10px;
+    height: 30px;
+}
+
+.myButton img {
+    width:100%;
+    height:100%;
+    border-radius: 20px;
+    background-size: 100% 100%;
+}
+
+
+.boton_con_flecha {
+    background-color: #888; 
+    color: #fff;
+    padding: 10px 20px;  
+    cursor: pointer; 
+    position: relative; 
+    width: 70px;
+    height: 60px;
+    border-radius: 28px;
+    top: 30px;
+    left: 50px;
+}
+
+
+.boton_con_flecha::after {
+  content: '\2192';
+  font-size: 50px;
+  position: absolute;
+  right: 8px;
+  top: -8px;
+}
+
+.text2 {
+  position: relative;
+  top: 20px;
+  display: flex;
+  font-family: Roboto;
+  font-size: 12px;
+  color: white;
+  padding-left: 153px;
+}
+
+
+
 

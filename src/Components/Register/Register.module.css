@@ -10,25 +10,41 @@
 }
 
 .modalContainer {
-  width: 700px;
+  width: 900px;
   height: 500px;
   border-radius: 12px;
-  background: linear-gradient(135deg, purple, lightblue, pink);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  background-size: cover;
+  position: relative;
+  z-index: 3;
 }
 
 .modalContainer .title {
   display: inline-block;
-  text-align: center;
   margin-top: 10px;
+  font-family: Roboto;
+  text-align: left;
+  font-size: 25px;
+  padding-left: 40px;
+  color: white;
+  text-shadow: 
+        -1px -1px 0 black, /* Borde superior izquierdo */
+         1px -1px 0 black, /* Borde superior derecho */
+        -1px  1px 0 black, /* Borde inferior izquierdo */
+         1px  1px 0 black; /* Borde inferior derecho */
+  position: relative;
+  top: -50px;
 }
 
 .titleCloseBtn {
+  position: relative;
+  right: 10px;
+  top: 10px;
   display: flex;
   justify-content: flex-end;
+  z-index: 3;
 }
 
 .titleCloseBtn button {
@@ -40,10 +56,68 @@
 
 .modalContainer .body {
   flex: 50%;
+  color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.7rem;
+  justify-content: left;
+  align-items: left;
+  font-size: 20px;
+  font-family: Roboto;
+  text-align: left;
+  padding-left: 10px;
+  text-shadow: 
+        -1px -1px 0 black, /* Borde superior izquierdo */
+         1px -1px 0 black, /* Borde superior derecho */
+        -1px  1px 0 black, /* Borde inferior izquierdo */
+         1px  1px 0 black; /* Borde inferior derecho */
+  position: relative;
+  left: 26px;
+  top: -50px;
+
+}
+
+.input_container {
+  width: 400px;
+  display: flex;
+  gap: 10px;
+  border-radius: 12px;
+}
+
+.label_container {
+  display: inline-block;
+  margin-right: 140px;
+}
+
+.button_container {
+  display: flex;
+  margin-left: 150px;
+    
+}
+
+.myButton{
+  background:none;
+  cursor:pointer;
+  border:none;
+  position: relative;
+  whidth: 10px;
+  height: 30px;
+  top: -45px;
+}
+
+.myButton img {
+  width:100%;
+  height:100%;
+  border-radius: 20px;
+  background-size: 100% 100%;
+}
+
+input[type="text1"],input[type="password2"] {
+  width: 88%;
+  height: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #553ECD;
+  font-style: Roboto;
+  border-radius: 10px;
 }
 
 .modalContainer .footer {
@@ -59,15 +133,16 @@
   margin: 10px;
   border: none;
   background-size: cover;
-  background-color: blue;
+  background-color: #37BED3;
   color: white;
   border-radius: 8px;
   font-size: 20px;
+  font-family: Roboto;
+  font-weight: bold;
   cursor: pointer;
-}
-
-#cancelBtn {
-  background-color: crimson;
+  position: relative;
+  top: -43px;
+  right: 230px;
 }
 
 .title2{
@@ -79,4 +154,15 @@
     text-decoration: none; 
     color: rgb(6, 28, 70);
     margin-left: 9px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 12px;
+  margin: 0;
+  z-index: -1;
 }

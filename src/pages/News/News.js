@@ -25,7 +25,7 @@ function News() {
               getData={getDataFromChild}
             />
         ))}
-      <img className={styles.imageNews}src="news2.jpg"/>
+      <img className={styles.imageNews}src="news.jpeg"/>
       <h1 className={styles.title}> NEWS </h1>
       <div className={styles.cards}>
         <div className={styles.card1}>
@@ -36,7 +36,7 @@ function News() {
         <div className={styles.card2}>
           <h1 className={styles.titleCar}>Noticia B</h1>
           <p>Una descripcion de la Noticia B</p>
-          <button className={styles.boton1}> Leer Mas.</button>
+          <button className={styles.boton1}> Leer Mas</button>
         </div>
       </div>
     </div>
