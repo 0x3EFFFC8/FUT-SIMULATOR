@@ -14,23 +14,23 @@ function Register({closeRegister}) {
               </div>
               
               <div className={styles.title}>
-                <h1>Crear nueva cuenta</h1>
+                <h1>Create new account</h1>
               </div>
               <div className={styles.body}>
                 <form method="POST">
                     
-                  <label className={styles.label_container}for="Nombre">Nombre</label>
-                  <label className={styles.label_container}for="Apellido">Apellido</label>
+                  <label className={styles.label_container}for="Nombre">Name</label>
+                  <label className={styles.label_container}for="Apellido">Last name</label>
                   
                   <div className={styles.input_container}> 
                     <input type="text1" id="text1" name="Nombre" required/><br />
                     <input type="text1" id="text2" name="Apellido" required/><br />
                   </div>  
-                  <label for="text1">Correo</label><br />
+                  <label for="text1">Mail</label><br />
                   <input type="text1" id="text3" name="correo" required/>
-                  <label for="text1">Contraseña</label><br />
+                  <label for="text1">Password</label><br />
                   <input type="password2" id="contrasena" name="contrasena" required/><br/>
-                  <label for="text1">Confirmar Contraseña</label><br />
+                  <label for="text1">Confirm Password</label><br />
                   <input type="password2" id="contrasena" name="contrasena" required/>
                 </form>
               </div>
@@ -41,7 +41,7 @@ function Register({closeRegister}) {
                 <button className={styles.myButton}><img src="xbox.png"/></button>
               </div>
               <div className={styles.footer}>
-                <button>Crear cuenta</button>
+                <button>Create account</button>
               </div>
             </div>
           </div>

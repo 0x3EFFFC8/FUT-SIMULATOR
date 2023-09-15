@@ -16,14 +16,14 @@ function Login({closeLogin}) {
                   <button onClick={() => closeLogin()}> x </button>
                 </div>
                 <div className={styles.title}>
-                  <h1>INICIAR<br/>SESION</h1>
+                  <h1>LOG<br/>IN</h1>
                 </div>
                 <div className={styles.body}>  
                   <form method="POST">
-                    <label for="correo">CORREO</label><br />
-                    <input type="text" placeholder="Ingresa tu correo" id="correo" name="correo" required/><br />
-                    <label for="contrasena">CONTRASEÑA</label><br />
-                    <input type="password" placeholder="Ingresa tu contraseña" id="contrasena" name="contrasena" required/>
+                    <label for="correo">MAIL</label><br />
+                    <input type="text" placeholder="Enter your email" id="correo" name="correo" required/><br />
+                    <label for="contrasena">PASSWORD</label><br />
+                    <input type="password" placeholder="Enter your password" id="contrasena" name="contrasena" required/>
                   </form>
                 </div>
                 <div className={styles.button_container}>
@@ -33,7 +33,7 @@ function Login({closeLogin}) {
                   <button className={styles.myButton}><img src="xbox.png"/></button>
                 </div>
                 <label className={styles.text2}>
-                  <input type="checkbox"/> Permanecer <br /> conectado
+                  <input type="checkbox"/>Stay connected
                 </label>
                 <button className={styles.boton_con_flecha}/>
               </div>

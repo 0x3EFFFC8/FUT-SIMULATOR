@@ -3,7 +3,7 @@ import Nvar from './../../Components/Nvar/Nvar';
 import styles from './Home.module.css';
 import styled from 'styled-components';
 import Login from './../../Components/Login/Login';
-import Register from './../../Components/Register/Register'
+import Register from './../../Components/Register/Register';
 
 function Home() {
   const [post] = useState([{
@@ -34,10 +34,9 @@ function Home() {
       </h1>
       
       <img className={styles.imageLogin}src="Home.jpeg"/>
-      <button className={styles.buttonJ} button onClick={()=>{ setOpenLogin(true);}}>JUEGA AHORA</button>
+      <button className={styles.buttonJ} button onClick={()=>{ setOpenLogin(true);}}>PLAY NOW</button>
       {openLogin && <Login closeLogin={setOpenLogin}/>}
-      <button className={styles.buttonR}>REGISTRARSE</button>
-      <button className={styles.buttonR} button onClick={() => {setOpenRegister(true)}}>REGISTRARSE</button>
+      <button className={styles.buttonR} button onClick={() => {setOpenRegister(true)}}>REGISTER</button>
       {openRegister && <Register closeRegister={setOpenRegister}/>}
     </div>
   );

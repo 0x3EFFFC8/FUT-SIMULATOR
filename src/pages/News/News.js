@@ -6,13 +6,8 @@ function News() {
   const [post] = useState([{
       id: 1,
       name: 'name 1'
-    }/*,{
-      id: 2,
-      name: 'name 2'
-    },{
-      id: 3,
-      name: 'name 3'
-    }*/]);
+    } 
+  ]);
   const getDataFromChild = (data) => {
     console.log(`viendo Dta desde App: ${data}`);
   };
@@ -29,14 +24,14 @@ function News() {
       <h1 className={styles.title}> NEWS </h1>
       <div className={styles.cards}>
         <div className={styles.card1}>
-          <h1 className={styles.titleCar}>Noticia A</h1>
-          <p>Una descripcion de la Noticia A</p>
-          <button className={styles.boton2}> Leer Mas</button>
+          <h1 className={styles.titleCar}>News A</h1>
+          <p>A description of News A</p>
+          <button className={styles.boton2}>Read more</button>
         </div>
         <div className={styles.card2}>
-          <h1 className={styles.titleCar}>Noticia B</h1>
-          <p>Una descripcion de la Noticia B</p>
-          <button className={styles.boton1}> Leer Mas</button>
+          <h1 className={styles.titleCar}>News B</h1>
+          <p>A description of News B</p>
+          <button className={styles.boton1}>Read more</button>
         </div>
       </div>
     </div>
