@@ -10,18 +10,18 @@
 }
 
 .title {
-    position: absolute;
-    top: 30px;
-    left: 45px;
-    font-size: 100px; 
-    color: white;
-    padding: 20px;
-    text-align: left;
+  position: absolute;
+  top: 70px;
+  left: 45px;
+  font-size: 100px; 
+  color: white;
+  padding: 20px;
+  text-align: left;
 }
 
 .imageLogin {
   width: 100%;
-  height:100%;
+  height:100vh;
   object-fit: cover;
 }
 
@@ -37,7 +37,7 @@
   font-size: 20px;
   cursor: pointer;
   position: absolute;
-  top: 500px;
+  top: 480px;
   left: 50px;
 }
 
@@ -54,7 +54,7 @@
   font-size: 20px;
   cursor: pointer;
   position: absolute;
-  top: 500px;
+  top: 480px;
   left: 300px;
 }
 

@@ -1,25 +1,52 @@
-import { useState } from "react";
+import { useState,useEffect  } from "react";
 import styles from './Login.module.css';
 import styled from 'styled-components';
 import Register from './../Register/Register'
 import { Link } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import {useSelector,useDispatch} from 'react-redux';
+import {ShowLogin} from './../../features/login/loginSlice'
 
-function Login({closeLogin}) {
-  const [openRegister, setOpenRegister] = useState(false);
-  return (
-          
+function Login() { 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(ShowLogin(false));
+  };
+  // Función para habilitar el scroll una vez que el componente se desmonte
+  const enableBodyScroll = () => {
+    document.body.style.overflow = 'auto';
+  };
+
+  // Deshabilitar el scroll al montar el componente
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    // Habilitar el scroll cuando el componente se desmonte
+    return () => {
+      enableBodyScroll();
+    };
+  }, []);
+  const handleLogin = () => {
+    // Lógica de inicio de sesión exitoso
+
+    // Redirige a la página de destino
+    navigate('/HomeGame');
+    dispatch(ShowLogin(false));
+  };
+  return (     
           <div className={styles.modalBackground}>
             <div className={styles.modalContainer}>
               <img className={styles.img} src="LoginAuten.jpeg"/>
               <div className={styles.rightSide}>
                 <div className={styles.titleCloseBtn}>
-                  <button onClick={() => closeLogin()}> x </button>
+                  <button onClick={handleClick}> x </button>
                 </div>
                 <div className={styles.title}>
-                  <h1>LOG<br/>IN</h1>
+                  <h1>LOG IN<br/></h1>
                 </div>
                 <div className={styles.body}>  
-                  <form method="POST">
+                  <form method="POST" className={styles.passwordLogin}>
                     <label for="correo">MAIL</label><br />
                     <input type="text" placeholder="Enter your email" id="correo" name="correo" required/><br />
                     <label for="contrasena">PASSWORD</label><br />
@@ -35,10 +62,10 @@ function Login({closeLogin}) {
                 <label className={styles.text2}>
                   <input type="checkbox"/>Stay connected
                 </label>
-                <button className={styles.boton_con_flecha}/>
+                <button className={styles.boton_con_flecha} onClick={handleLogin}/>
               </div>
             </div>
-        </div>
+           </div>
   );
 }
 

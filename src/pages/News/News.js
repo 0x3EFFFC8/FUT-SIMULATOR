@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import Nvar from './../../Components/Nvar/Nvar';
 import styles from './News.module.css';
+import Login from '../../Components/Login/Login';
+import { useSelector } from 'react-redux';
 
 function News() {
   const [post] = useState([{
@@ -11,6 +13,7 @@ function News() {
   const getDataFromChild = (data) => {
     console.log(`viendo Dta desde App: ${data}`);
   };
+  const loginState = useSelector((state) => state.login)
   return (
     <div className={styles.container}>
         {post.map((p, i) => (
@@ -34,6 +37,7 @@ function News() {
           <button className={styles.boton1}>Read more</button>
         </div>
       </div>
+      {loginState.valueL === true && <Login/>}
     </div>
   );
 }

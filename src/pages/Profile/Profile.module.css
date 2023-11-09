@@ -1,0 +1,111 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  padding: 0px 0px 11px 0px;
+  display: flex;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.containerAvatar {
+  top: 28.5%;
+  left: 1%;
+  width: 25%;
+  height: 40%;
+  position: absolute;
+  display: flex;
+  background: rgba(0,0,0,0);
+}
+
+.containerLeague {
+  top: 30%;
+  left: 30%;
+  width: 15%;
+  height: 30%;
+  position: absolute;
+  display: flex;
+  background: rgba(0,0,0,0);
+  z-index: 1;
+}
+.containerData {
+  width: 1000px; 
+  height: 300px;
+  top: 20%;
+  left: 30%;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  -webkit-transform: skewX(20deg); 
+  -moz-transform: skewX(20deg); 
+  -o-transform: skewX(20deg); 
+}
+
+.namePlayer {
+  position: absolute;
+  top: 18%;  
+  left: 6%;  
+  color: white;
+  padding-left: 20px;
+  text-align: left;
+  font-familit: Roboto;
+  text-shadow: 
+        -1px -1px 0 black, /* Borde superior izquierdo */
+         1px -1px 0 black, /* Borde superior derecho */
+        -1px  1px 0 black, /* Borde inferior izquierdo */
+         1px  1px 0 black; /* Borde inferior derecho */
+}
+
+.textLeft {
+  position: absolute;
+  top: 60px;
+  left: 140px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 60px;
+  -webkit-transform: skewX(-20deg); 
+  -moz-transform: skewX(-20deg); 
+  -o-transform: skewX(-20deg);
+  text-shadow: 
+        -1px -1px 0 black, /* Borde superior izquierdo */
+         1px -1px 0 black, /* Borde superior derecho */
+        -1px  1px 0 black, /* Borde inferior izquierdo */
+         1px  1px 0 black; /* Borde inferior derecho */
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  whidth: 40px;
+  height: 40px;
+  color: silver;
+  padding-left: 3.5%;
+  top:25%;
+  left:8%;
+  position: absolute;
+  font-size: 10px;
+  text-shadow: 
+        -1px -1px 0 black, /* Borde superior izquierdo */
+         1px -1px 0 black, /* Borde superior derecho */
+        -1px  1px 0 black, /* Borde inferior izquierdo */
+         1px  1px 0 black; /* Borde inferior derecho */
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  float: left;
+  margin: 0;
+  z-index: -1;
+}
+
+

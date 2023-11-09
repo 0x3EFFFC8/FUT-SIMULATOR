@@ -1,0 +1,66 @@
+.container{
+    width: 100%;
+    position: fixed;
+    padding: 11px 0px 11px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0050a1;
+    z-index: 2;
+}
+
+.title{
+    margin: 0;
+    font-size: 18px;
+    margin-left: 20px;
+    text-decoration: none; 
+    color: black;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.linea {
+  color: white;
+  text-decoration: none;
+  padding: 50px 20px;
+  font-family: Roboto;
+  font-size: 20px;
+  padding-right: 50px;
+}
+.lineaPlay {
+  color: white;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 20px;
+}
+.logo {
+  position: relative;
+  top: 1px;
+  left: 70px;
+  width: 100px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.PlayButton {
+  width: 10%;
+  height: 10%;
+  font-size: 20px;
+  font-family: Roboto;
+  background: rgba(0,0,0,0);
+  color: white;
+  padding: 10px 0px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  left: 2%;
+}
+
+.img {
+  height: 90%;
+  width: 40%;
+}
+
+

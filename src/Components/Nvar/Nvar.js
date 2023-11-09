@@ -1,21 +1,20 @@
 import { useState } from "react";
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import styles from './Nvar.module.css';
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
+import {ShowLogin} from './../../features/login/loginSlice';
+import Login from '../../Components/Login/Login';
 
-function Nvar({name,getData}) {
-    const [showMessage, setshowMessage] = useState(true);
-    const[message] = useState('');
-    const onButtonClick = () => {
-        setshowMessage(! showMessage);
-        /*if (message){
-            setMessage({message: "Cargando..."});
-        }
-        getData(10);*/
-    }
+function Nvar() {
+    const dispatch = useDispatch()
+    const handleClick = () => {
+      dispatch(ShowLogin(true));
+    };
     return (
         <div className={styles.container}>
-            <img src="Logo.png" className={styles.logo}/> 
+            <img src="Logo.png" className={styles.logo}/>            
             <h1 className= {styles.title}>
                 <Link className={styles.linea} to = "/">Home</Link>
             </h1>
@@ -24,13 +23,10 @@ function Nvar({name,getData}) {
             </h1>
             <h1 className= {styles.title}>
                 <Link className={styles.linea} to = "/support">Support</Link>
-            </h1> 
-            {
-                showMessage ? 
-                <p> {message}{}</p>
-                :
-                null
-            }
+            </h1>
+            <h1>
+              <button className={styles.loginButton} onClick={handleClick}> Login</button>
+            </h1>
         </div>
     );
 }

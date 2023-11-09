@@ -2,24 +2,6 @@
   text-align: center;
 }
 
-.loginButton {
-  font-weight: bold;
-  font-size: 20px;
-  font-family: Roboto, Regular;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  background: rgba(0,0,0,0);
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  width: 139.5px;  
-  height: 57px;
-  top: 0px;
-  left: 1210px;
-  border: none;
-  z-index: 2;
-}
 
 .App-logo {
   height: 40vmin;
@@ -54,5 +36,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 

@@ -1,0 +1,135 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  padding: 0px 0px 11px 0px;
+  display: flex;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.title {
+  position: absolute;
+  top: 0px;  
+  left: 31%;
+  font-size: 45px; 
+  color: orange;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-familit: Roboto;
+  text-shadow: 
+        -1px -1px 0 black, /* Borde superior izquierdo */
+         1px -1px 0 black, /* Borde superior derecho */
+        -1px  1px 0 black, /* Borde inferior izquierdo */
+         1px  1px 0 black; /* Borde inferior derecho */
+}
+
+.container1 {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  width: 30%;
+  height: 40%;
+  background: rgba(0,0,0,0.5);
+  border-radius: 15%;
+  z-index:1;
+}
+
+.container2 {
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  width: 30%;
+  height: 40%;
+  background: rgba(0,0,0,0.5);
+  border-radius: 15%;
+  z-index:1;
+}
+
+.container3 {
+  position: absolute;
+  top: 15%;
+  left: 67%;
+  width: 30%;
+  height: 40%;
+  background: rgba(0,0,0,0.5);
+  border-radius: 15%;
+  z-index:1;
+}
+
+
+.container4 {
+  position: absolute;
+  top: 58%;
+  left: 3%;
+  width: 30%;
+  height: 40%;
+  background: rgba(0,0,0,0.5);
+  border-radius: 15%;
+  z-index:1;
+}
+
+.container5 {
+  position: absolute;
+  top: 58%;
+  left: 35%;
+  width: 30%;
+  height: 40%;
+  background: rgba(0,0,0,0.5);
+  border-radius: 15%;
+  z-index:1;
+}
+
+.container6 {
+  position: absolute;
+  top: 58%;
+  left: 67%;
+  width: 30%;
+  height: 40%;
+  background: rgba(0,0,0,0.5);
+  border-radius: 15%;
+  z-index:1;
+}
+
+.container1 imgF1 {
+  width: 100%;
+  height: 100%;
+}
+.container2 imgF2 {
+  width: 100%;
+  height: 100%;
+}
+.container3 imgF3 {
+  width: 100%;
+  height: 100%;
+}
+.container4 imgF4 {
+  width: 100%;
+  height: 100%;
+}
+.container5 imgF5 {
+  width: 100%;
+  height: 100%;
+}
+.container6 imgF6 {
+  width: 100%;
+  height: 100%;
+}
+.container img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  float: left;
+  margin: 0;
+  z-index: -1;
+}
+
+

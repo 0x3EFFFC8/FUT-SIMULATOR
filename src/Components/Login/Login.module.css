@@ -2,27 +2,29 @@
   width: 100%;
   height: 100vh;
   background-color: rgba(200,200,200,0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
+  transform: translate(-50%,-50%);
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 5;
+  overflow: hidden;
+  top: 290px;
+  left: 676px;
 }
 
 .modalContainer {
-  width: 700px;
-  height: 500px;
-  top: 10px;
-  margin-top: -50px;
+  width: 50%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
   border-radius: 12px;
   background-color: #090C11;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
   background-size: cover;
-  position: relative;
+  position: fixed;
+  transform: translate(-50%, -50%);
   z-index: 3;  
 }
 
@@ -32,7 +34,8 @@
   font-family: Roboto;
   text-align: left;
   color: white;
-  padding-right: 115px;
+  padding-right: 9px;
+  font-size: 102%;
 }
 
 .titleCloseBtn {
@@ -45,7 +48,7 @@
 }
 
 .titleCloseBtn button {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0);
   color: white;
   border: none;
   font-size: 25px;
@@ -67,19 +70,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.7rem;
+  font-size: 102%;
   font-family: Roboto;
   text-align: left;
-  padding-left: 10px;
+  padding-left: 110px;
 }
-
-.modalContainer .footer {
-  flex: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 
 .img {
   width: 45%;
@@ -99,7 +94,7 @@
   padding-left: 200px;
 }
 
-input[type="text"], input[type="password"] {
+.passwordLogin input[type="text"], input[type="password"] {
   width: 100%;
   height: 10px;
   padding: 10px;
@@ -110,7 +105,7 @@ input[type="text"], input[type="password"] {
 
 .button_container {
   display: flex;
-  margin-left: 150px;
+  margin-left: 180px;
 }
 
 .myButton{
@@ -140,7 +135,7 @@ input[type="text"], input[type="password"] {
   width: 70px;
   height: 60px;
   border-radius: 28px;
-  top: 30px;
+  top: 60px;
   left: 50px;
 }
 
@@ -150,7 +145,7 @@ input[type="text"], input[type="password"] {
   font-size: 50px;
   position: absolute;
   right: 8px;
-  top: -8px;
+  top: -18px;
 }
 
 .text2 {
@@ -158,9 +153,9 @@ input[type="text"], input[type="password"] {
   top: 20px;
   display: flex;
   font-family: Roboto;
-  font-size: 12px;
+  font-size: 102%;
   color: white; 
-  padding-left: 153px;
+  padding-left: 193px;
 }
 
 

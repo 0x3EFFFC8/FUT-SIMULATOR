@@ -10,6 +10,8 @@
 }
 
 .modalContainer {
+  top: 10%;
+  left: 17%;
   width: 900px;
   height: 500px;
   border-radius: 12px;
@@ -17,7 +19,7 @@
   display: flex;
   flex-direction: column;
   background-size: cover;
-  position: relative;
+  position: fixed;
   z-index: 3;
 }
 
@@ -83,7 +85,7 @@
 
 .label_container {
   display: inline-block;
-  margin-right: 140px;
+  margin-right: 155px;
 }
 
 .button_container {
@@ -109,7 +111,7 @@
   background-size: 100% 100%;
 }
 
-input[type="text1"],input[type="password2"] {
+.password input[type="password"], input[type="text1"] {
   width: 88%;
   height: 10px;
   padding: 10px;
@@ -132,8 +134,8 @@ input[type="text1"],input[type="password2"] {
   margin: 10px;
   border: none;
   background-size: cover;
-  background-color: #37BED3;
-  color: white;
+  background-color: white;
+  color: black;
   border-radius: 8px;
   font-size: 20px;
   font-family: Roboto;

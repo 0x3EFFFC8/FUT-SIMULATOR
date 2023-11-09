@@ -4,6 +4,8 @@ import styles from './Home.module.css';
 import styled from 'styled-components';
 import Login from './../../Components/Login/Login';
 import Register from './../../Components/Register/Register';
+import { useSelector, useDispatch } from 'react-redux';
+import {ShowLogin,ShowRegister} from './../../features/login/loginSlice';
 
 function Home() {
   const [post] = useState([{
@@ -11,19 +13,20 @@ function Home() {
       name: 'name 1'
     }
     ]);
-  const getDataFromChild = (data) => {
-    console.log(`viendo Dta desde App: ${data}`);
+  const dispatch = useDispatch()
+  const handleClickL = () => {
+    dispatch(ShowLogin(true));
+  }; 
+  const handleClickR = () => {
+    dispatch(ShowRegister(true));
   };
-  const [openLogin, setOpenLogin] = useState(false);
-  const [openRegister, setOpenRegister] = useState(false);
-
+  const loginState = useSelector((state) => state.login)
   return (
     <div className={styles.container}>
       {post.map((p, i) => (
           <Nvar
             key={p.id}
             name={p.name}
-            getData={getDataFromChild}
           />
         ))}
   
@@ -34,10 +37,10 @@ function Home() {
       </h1>
       
       <img className={styles.imageLogin}src="Home.jpeg"/>
-      <button className={styles.buttonJ} button onClick={()=>{ setOpenLogin(true);}}>PLAY NOW</button>
-      {openLogin && <Login closeLogin={setOpenLogin}/>}
-      <button className={styles.buttonR} button onClick={() => {setOpenRegister(true)}}>REGISTER</button>
-      {openRegister && <Register closeRegister={setOpenRegister}/>}
+      <button className={styles.buttonJ} button onClick={handleClickL}>PLAY NOW</button>
+      {loginState.valueL === true && <Login />}
+      <button className={styles.buttonR} button onClick={handleClickR}>REGISTER</button>
+      {loginState.valueR === true && <Register />}
     </div>
   );
 }

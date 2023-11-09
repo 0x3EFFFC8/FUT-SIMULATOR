@@ -1,14 +1,12 @@
 .container{
   width: 100%;
-  height: 100vh;
-  position: absolute;
+  height: 2650px;
+  position: relative;
   padding: 0px 0px 11px 0px;
-  display: flex;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.5);
+  background: #563ecdc9;
   z-index: 2;
 }
+
 
 .containerS {
   position: absolute;
@@ -20,6 +18,195 @@
   border-radius: 12px;
 }
 
+
+.copa{
+  position: relative;
+  top: 200px;
+  left: 0%;
+  width: 21%;
+  height: 300px;
+}
+.paralax1{
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  left: 1px;
+  background-color: black;
+}
+.parallax1img {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.paralax2{
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  top: 735px;
+  background-color: #19103B;
+}
+.parallax2img {
+  position: relative;
+  top: 100px;
+  width: 550px;
+  height: 470px;
+  transition: transform 0.5s ease;
+}
+
+@keyframes blur-out-expand{0%{transform:scale(1);filter:blur(.01px);} 
+100%{transform:scale(2);filter:blur(12px);opacity:0}}
+
+.paralax3{
+  position: absolute;
+  width: 100%;
+  height: 750px;
+  right: 0;
+  top: 1900px;
+  background-color: #19103B;
+}
+.parallax3img {
+  position: relative;
+  width: 100%;
+  height: 820px;
+}
+
+.champions2{
+  position: relative;
+  width: 10%;
+  top: 100px;
+  right: 10%;
+  transition: transform 0.5s ease;
+}
+.champions2:hover{
+  animation:blur-in 0.7s linear both
+}
+.champions1{
+  position: relative;
+  width: 10%;
+  top: 100px;
+  left:200px;
+  height: auto;
+  transition: transform 0.5s ease;
+
+}
+.champions1:hover{
+  animation:blur-in 0.7s linear both
+}
+
+
+ @keyframes blur-in{
+  0%{filter:blur(12px);opacity:0}
+  100%{filter:blur(0);opacity:1}}
+
+.margenM{
+  top: 0px;
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  line-height:150px; 
+  background-color: #10203b;
+
+}
+
+
+.section{
+  position: absolute;
+  width: 100%;
+  top: 550px;
+  height: 200px;
+  text-align: center;
+  align-items: center;
+  line-height:150px; 
+  color: #fafafa;
+  background-color: #553ECD;
+  transition: all 0.25s;
+}
+.section:hover{
+  transform: translateY(-15px);
+  transform: translateX(-15px,15px);
+}
+
+.infoSuport{
+  position: relative;
+  height: 6000px;
+  top: 80px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 200px;
+
+}
+
+.button_container {
+  position: relative;
+  height: 10%;
+  top: -450px;
+  right: 360px;
+}
+.containerB_L{
+  position: relative;
+  background-color: #4a36ae;
+  height: 450px;
+  top: 1200px;
+  width: 100%;
+
+}
+.text{
+  position:absolute;
+  top: 100px;
+  left: 700px;
+  font-size: 40px; 
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: bold;
+}
+.myButton{
+  background:none;
+  cursor:pointer;
+  border:none;
+  position: relative;
+  top: 1300px;
+  height: 90px;
+  padding-left:40px;
+  transition: all 0.8s;
+}
+.myButton:hover{
+  animation:jello-horizontal 0.9s linear both;
+}
+
+
+@keyframes jello-horizontal{
+  0%{transform:scale3d(1,1,1)}
+  30%{transform:scale3d(1.25,.75,1)}
+  40%{transform:scale3d(.75,1.25,1)}
+  50%{transform:scale3d(1.15,.85,1)}
+  65%{transform:scale3d(.95,1.05,1)}
+  75%{transform:scale3d(1.05,.95,1)}
+  100%{transform:scale3d(1,1,1)}}
+.contactUs{
+  font-size: 50px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  text-decoration: solid;
+  transition: all 0.8s;
+}
+.contactUs:hover{
+  animation:shake-left-right 2.0s;
+}
+
+ @keyframes shake-left-right{0%,
+  100%{
+    transform:rotate(0deg);transform-origin:50% 50%}
+  10%{transform:rotate(8deg)}
+  20%,
+  40%,
+  60%{transform:rotate(-10deg)}
+  30%,
+  50%,
+  70%{transform:rotate(10deg)}80%{transform:rotate(-8deg)}90%{transform:rotate(8deg)}}
+
 .title {
   position: relative;
   top: -30px;
@@ -30,22 +217,25 @@
   font-familit: Roboto;
 }
 
-.text {
+.textDise{
   position: absolute;
-  top: 150px;
-  left: 130px;
+  width: 1482px;
+  top: 2580px;
   font-size: 20px; 
   color: white;
   padding: 20px;
   text-align: center;
-  font-familit: Roboto;
+  font-family: Roboto;
+  right: 0px;
   font-weight: bold;
+  background-color: #553ECD;
 }
+
+
 
 .container_text {
   display: flex;
   align-items: center;
-  whidth: 40px;
   height: 40px;
 }
 
@@ -53,13 +243,12 @@
   position: relative;
   display: inline-block;
   margin-right: 20px;
-  top: 430px;
-  right: 370px;
-  font-size: 15px; 
+  top: 220px;
+  left: 180px;
+  font-size: 20px; 
   color: white;
   padding: 20px;
   text-align: center;
-  font-familit: Roboto;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -67,7 +256,6 @@
 .container_text2 {
   display: flex;
   align-items: center;
-  whidth: 40px;
   height: 40px;
 }
 
@@ -75,9 +263,9 @@
   position: relative;
   display: inline-block;
   margin-right: 60px;
-  top: 480px;
-  right: 680px;
-  font-size: 15px; 
+  top: 350px;
+  left: 180px;
+  font-size: 20px; 
   color: white;
   padding: 20px;
   text-align: center;
@@ -86,24 +274,8 @@
   text-decoration: underline;
 }
 
-.button_container {
-  display: flex;
-  position: relative;
-  margin-left: 60px;
-  top: 300px;
-  whidth: 100px;
-  height: 100px;
-}
 
-.myButton{
-  background:none;
-  cursor:pointer;
-  border:none;
-  position: relative;
-  whidth: 70px;
-  height: 60px;
-  padding-left:40px;
-}
+
 
 .myButton img {
   width:100%;
