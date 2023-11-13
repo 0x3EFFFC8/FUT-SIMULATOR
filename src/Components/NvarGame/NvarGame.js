@@ -1,12 +1,18 @@
 import { useState } from "react";
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import {auth} from './../../config/firebase'
+import {signOut} from 'firebase/auth'
 import styles from './NvarGame.module.css';
-import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
 function NvarGame() {
-  return (
+    const handleLogout = async () => {
+        try {
+          await signOut(auth);
+        } catch (error) {
+          console.error('Error al cerrar sesión:', error);
+        }
+      };
+    return (
         <div className={styles.container}>     
             <button className={styles.PlayButton} >
               <img className={styles.img} src="play.png"/>
@@ -24,7 +30,7 @@ function NvarGame() {
             <h1 className= {styles.title}>
                 <Link className={styles.linea} to = "/Collection">COLLECTION</Link>
             </h1>
-            <button className={styles.PlayButton}>
+            <button className={styles.PlayButton} onClick={handleLogout}>
               <Link className={styles.linea} to = "/">LOGOUT</Link>
             </button>
         </div>

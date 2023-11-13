@@ -1,0 +1,10 @@
+.card{
+    position: absolute;
+    background-color: gold;
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    height:200px;
+    text-align: center;
+    padding-left: 10px;
+}

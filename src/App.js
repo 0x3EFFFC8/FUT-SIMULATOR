@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import {Route,Routes} from 'react-router-dom';
-import styled from "styled-components";
-import { Link } from 'react-router-dom';
 import { useSelector} from 'react-redux';
 import './App.css';
 import Home from './pages/Home/Home';
@@ -12,7 +10,8 @@ import HomeGame from './pages/HomeGame/HomeGame';
 import NewsGame from './pages/NewsGame/NewsGame';
 import Profile from './pages/Profile/Profile';
 import Formations from './pages/Formations/Formations';
-import {Parallax} from 'react-parallax';
+import Collections from './pages/collections/Cards';
+
 
 function App(){
     const loginState = useSelector((state) => state.login)
@@ -26,6 +25,7 @@ function App(){
           <Route exact path="/Profile" element={<Profile/>}/>
           <Route exact path="/NewsGame" element={<NewsGame/>}/>
           <Route exact path="/Formations" element={<Formations/>}/>
+          <Route exact path="/collection" element={<Collections/>}/>
           <Route exact path="*" element={<Page404/>}/>
         </Routes>
       </div>

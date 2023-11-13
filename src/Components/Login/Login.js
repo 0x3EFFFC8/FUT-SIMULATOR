@@ -1,15 +1,17 @@
 import { useState,useEffect  } from "react";
+import { auth, db } from "./../../config/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import styles from './Login.module.css';
-import styled from 'styled-components';
-import Register from './../Register/Register'
-import { Link } from 'react-router-dom';
+import { doc, getDoc} from 'firebase/firestore';
 import {useNavigate} from 'react-router-dom';
-import {useSelector,useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {ShowLogin} from './../../features/login/loginSlice'
+import {setUserId} from '../../features/user/userSlice';
 
 function Login() { 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  
   const handleClick = () => {
     dispatch(ShowLogin(false));
   };
@@ -27,12 +29,34 @@ function Login() {
       enableBodyScroll();
     };
   }, []);
-  const handleLogin = () => {
-    // Lógica de inicio de sesión exitoso
-
-    // Redirige a la página de destino
-    navigate('/HomeGame');
-    dispatch(ShowLogin(false));
+  let userCredential;
+  const [email,setEmail] = useState("");
+  const [password,setPassword] = useState("");
+  const handleLogin = async () => {
+    try {
+      userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userId = userCredential.user.uid;
+      const userDocRef = doc(db, 'players', userId);
+      const getUserData = async () => {
+        try {
+          const docSnap = await getDoc(userDocRef);
+          if (docSnap.exists()) {
+            const userInfo = docSnap.data();
+            dispatch(setUserId(userInfo));
+          } else {
+            console.log('El usuario no existe en la base de datos.');
+          }
+        } catch (error) {
+          console.error('Error al obtener datos del usuario:', error);
+        }
+      }
+      getUserData();
+      navigate('/HomeGame');
+      dispatch(ShowLogin(false)); 
+    }catch (error) {
+        console.error('Error al iniciar sesión', error.message);
+        // Puedes mostrar un mensaje de error al usuario o manejar el error de otra manera
+    }
   };
   return (     
           <div className={styles.modalBackground}>
@@ -48,9 +72,11 @@ function Login() {
                 <div className={styles.body}>  
                   <form method="POST" className={styles.passwordLogin}>
                     <label for="correo">MAIL</label><br />
-                    <input type="text" placeholder="Enter your email" id="correo" name="correo" required/><br />
+                    <input type="text" placeholder="Enter your email" id="correo" name="correo" required
+                     onChange={(e) => setEmail(e.target.value)}/><br />
                     <label for="contrasena">PASSWORD</label><br />
-                    <input type="password" placeholder="Enter your password" id="contrasena" name="contrasena" required/>
+                    <input type="password" placeholder="Enter your password" id="contrasena" name="contrasena" require
+                     onChange={(e) => setPassword(e.target.value)}/>
                   </form>
                 </div>
                 <div className={styles.button_container}>

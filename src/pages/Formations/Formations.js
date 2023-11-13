@@ -1,7 +1,5 @@
 import {useState} from 'react';
-import NvarGame from './../../Components/NvarGame/NvarGame';
 import styles from './Formations.module.css';
-import { useSelector } from 'react-redux';
 
 function Formations() {
   const [post] = useState([{
